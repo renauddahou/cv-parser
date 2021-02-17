@@ -1,5 +1,5 @@
 import re
-from .textCleaners import clean_text
+from textCleaners import clean_text
 
 
 class DateRegex:

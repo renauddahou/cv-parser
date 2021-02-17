@@ -3,9 +3,9 @@ import json
 from os import path
 from collections import defaultdict
 
-from .scraper import *
-from .textCleaners import *
-from .dateregex import *
+from scraper import *
+from textCleaners import *
+from dateregex import *
 
 from string import punctuation
 from nltk.corpus import stopwords

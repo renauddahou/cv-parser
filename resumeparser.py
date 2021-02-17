@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from main.parser import *
+from parser import *
 
 
 def create_arg_parser():
