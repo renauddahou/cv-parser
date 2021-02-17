@@ -68,6 +68,6 @@ def remove_blanks_from_filename(file_path):
 
 
 if __name__ == "__main__":
-    resume_path=r"CV_BENNAOUI_Ameur.pdf"
+    resume_path=r"/data/CV_BENNAOUI_Ameur.pdf"
     target_dir=r""
     parse_resume(resume_path, target_dir)
