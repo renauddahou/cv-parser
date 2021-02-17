@@ -57,7 +57,7 @@ def convert_html_resume_to_object(path_to_html):
     print('::::::::::::::::::::::')
     print(url_to_file)
     scraper.browser.get(url_to_file)
-    scraper.browser.save_screenshot('img.jpg')
+    scraper.browser.save_screenshot('img.png')
 
     resume_lines = []
 
