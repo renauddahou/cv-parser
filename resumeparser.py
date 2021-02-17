@@ -72,7 +72,7 @@ if __name__ == "__main__":
     if os.name!='nt' : 
             display = Display(visible=0, size=(800, 600))
             display.start()     
-    resume_path=r"./data/CV_BENNAOUI_Ameur.pdf"
+    resume_path=r"./data/Praveen.pdf"
     target_dir=r""
     parse_resume(resume_path, target_dir=None)
     if os.name!='nt' :                           
