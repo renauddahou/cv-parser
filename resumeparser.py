@@ -2,7 +2,7 @@ import argparse
 import sys
 
 from parser import *
-
+from scraper import *
 
 def create_arg_parser():
     """"Creates and returns the ArgumentParser object."""
@@ -33,7 +33,7 @@ def start_resume_parsing(parsed_args):
 
     print('Parsing resumes in dir:', parsed_args.inputDirectory)
 
-    for root, dirs, files in os.walk(parsed_args.inputDirectory):
+    for root, dirs, files in os.walk(parsed_args):
         if files.__len__() == 0:
             print("The directory doesn't contain any files!")
             return
@@ -68,8 +68,6 @@ def remove_blanks_from_filename(file_path):
 
 
 if __name__ == "__main__":
-    arg_parser = create_arg_parser()
-    parsed_args = arg_parser.parse_args(sys.argv[1:])
-
-    if passed_arguments_are_correct(parsed_args):
-        start_resume_parsing(parsed_args)
+    resume_path=r"CV_BENNAOUI_Ameur.pdf"
+    target_dir=r""
+    parse_resume(resume_path, target_dir)
