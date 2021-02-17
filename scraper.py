@@ -53,7 +53,7 @@ def convert_html_resume_to_object(path_to_html):
     and text are extracted and stored in a dict. At the end the list of dictionaries is returned."""
 
     scraper = Scraper()
-    url_to_file = "file://" + path_to_html
+    url_to_file = "file:/" + path_to_html
     print('::::::::::::::::::::::')
     print(url_to_file)
     scraper.browser.get(url_to_file)
