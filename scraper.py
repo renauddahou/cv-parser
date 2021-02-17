@@ -2,12 +2,16 @@ import os
 import subprocess
 
 from selenium import webdriver
+from pyvirtualdisplay import Display
 
 
 class Scraper:
     """WebDriver used for opening, rendering, and scraping HTML files."""
 
     def __init__(self):
+        if os.name!='nt' : 
+            display = Display(visible=0, size=(800, 600))
+            display.start() 
         chromedriver = os.path.dirname(os.path.abspath(__file__)) + "/webdriver/chromedriver"
         os.environ["webdriver.chrome.driver"] = chromedriver
         self.browser = webdriver.Chrome(chromedriver)
@@ -15,6 +19,8 @@ class Scraper:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.browser.close()
+        if os.name!='nt' :                           
+            display.stop()  
 
 
 def convert_pdf_to_html(file_path):
