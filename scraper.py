@@ -59,7 +59,6 @@ def convert_html_resume_to_object(path_to_html):
     scraper.browser.get(url_to_file)
 
 
-
     resume_lines = []
 
     page_container = scraper.browser.find_element_by_id("page-container")
