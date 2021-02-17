@@ -74,7 +74,7 @@ if __name__ == "__main__":
             display.start()     
     resume_path=r"./data/CV_BENNAOUI_Ameur.pdf"
     target_dir=r""
-    resume_path=os.path.abspath(resume_path)
-    parse_resume(resume_path, target_dir)
+    parse_resume(resume_path, target_dir=None)
     if os.name!='nt' :                           
-        display.stop()      
+        display.stop()  
+    
